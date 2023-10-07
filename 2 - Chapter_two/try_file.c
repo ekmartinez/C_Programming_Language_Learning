@@ -1,16 +1,24 @@
-/*
-2.25 Print your initials in block letters down the page. Construct each block letter out of the let-
-ter it represents, as shown on the top of the next page:
+
+/*2.26 (Multiples) Write a program that reads in two integers and determines and prints whether
+the first is a multiple of the second. [Hint: Use the remainder operator.#include <stdio.h>
 */
 
 #include <stdio.h>
 
 int main(void) {
 
-	printf("\nEEEEEEEEE\nE\nEEEEE\nE\nEEEEEEEEE\n");
-	printf("\nZZZZZZZZZ\n        z\n    z\nz\nzzzzzzzzz\n");
-	printf("\nW       W\nW       W\nW   W   W\nW  W W  W\nW W   W W\n");
+	int num1;
+	int num2;
+
+	printf("Enter two integers to see if the first is multiple of the second >>> ");
+	scanf("%d%d", &num1, &num2);
+
+	if (num1 % num2 == 0) {
+		printf("%d is a multiple of %d", num1, num2);
+		return 0;
+	}
 	
+	printf("%d is not a multiple of %d", num1, num2);
 	return 0;
 }
 
