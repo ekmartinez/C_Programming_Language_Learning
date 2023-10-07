@@ -1,24 +1,43 @@
 
-/*2.26 (Multiples) Write a program that reads in two integers and determines and prints whether
-the first is a multiple of the second. [Hint: Use the remainder operator.#include <stdio.h>
+/*
+ (Separating Digits in an Integer) Write a program that inputs one five-digit number, sep-
+arates the number into its individual digits and prints the digits separated from one another by three
+spaces each. [Hint: Use combinations of integer division and the remainder operation.] For exam-
+ple, if the user types in 42139, the program should print 4   2   1   3   9
 */
 
-#include <stdio.h>
+`#include <stdio.h>
 
 int main(void) {
 
-	int num1;
-	int num2;
+	int num;
+	int digit;
+	int remainder;
 
-	printf("Enter two integers to see if the first is multiple of the second >>> ");
-	scanf("%d%d", &num1, &num2);
+	printf("Enter a five digit number >>> ");
+	scanf("%d", &num);
 
-	if (num1 % num2 == 0) {
-		printf("%d is a multiple of %d", num1, num2);
-		return 0;
-	}
+	// First Digit
+	digit = num / 10000;
+	remainder = num % 10000;
+	printf("%d   ", digit);
 	
-	printf("%d is not a multiple of %d", num1, num2);
+	// Second Digit
+	digit = remainder / 1000;
+	remainder = remainder % 1000;
+	printf("%d   ", digit);
+	
+	// Third Digit
+	digit = remainder / 100;
+	remainder = remainder % 100;
+	printf("%d   ", digit);
+
+    /// Fourth Digit
+	digit = remainder / 10;
+	remainder = (remainder % 10) % 10;
+	printf("%d   ", digit);
+	printf("%d   \n", remainder);
+
 	return 0;
 }
 
