@@ -240,6 +240,7 @@ int main(void) {
 	
 	return 0;
 }
+```
 
 2.25 Print your initials in block letters down the page. Construct each block letter out of the letter it represents, as shown on the top of the next page:
 
