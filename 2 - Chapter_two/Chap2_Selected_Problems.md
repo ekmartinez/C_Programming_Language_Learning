@@ -187,15 +187,6 @@ int main(void) {
 ```
 2.21 (Shapes with Asterisks) Write a program that prints the following shapes with asterisks.
 
-*********	  ***  		  *  	    *    
-*       *	 *   * 		 *** 	   * *   
-*       *	*     *		*****	  *   *  
-*       *	*     *		  *  	 *     * 
-*       *	*     *		  *  	*       *
-*       *	*     *		  *  	 *     * 
-*       *	*     *		  *  	  *   *  
-*       *	 *   * 		  *  	   * *   
-*********	  ***  		  *  	    *    
 
 ```c
 #include <stdio.h>
@@ -212,15 +203,59 @@ int main(void){
 	printf("*       *\t *   * \t\t  *  \t   * *   \n");
 	printf("*********\t  ***  \t\t  *  \t    *    \n\n");
 }
+
+Output:
+
+*********	  ***  		  *  	    *    
+*       *	 *   * 		 *** 	   * *   
+*       *	*     *		*****	  *   *  
+*       *	*     *		  *  	 *     * 
+*       *	*     *		  *  	*       *
+*       *	*     *		  *  	 *     * 
+*       *	*     *		  *  	  *   *  
+*       *	 *   * 		  *  	   * *   
+*********	  ***  		  *  	    *    
+
 ```
 
 2.24 (Odd or Even) Write a program that reads an integer and determines and prints whether it’s odd or even. [Hint: Use the remainder operator. An even number is a multiple of two. Any multiple of two leaves a remainder of zero when divided by 2.]
 
+```c
+#include <stdio.h>
 
+int main(void) {
+	
+	int number;
 
+	printf("\n-----Odd or Even -----");
+	printf("\nEnter an integer >>> ");
+	scanf("%d", &number);
 
+	if (number % 2 == 0) {
+		printf("\n%d is even.", number);
+		return 0;
+	}
+	
+	printf("\n%d is odd.", number);
+	
+	return 0;
+}
 
+2.25 Print your initials in block letters down the page. Construct each block letter out of the letter it represents, as shown on the top of the next page:
 
+```c
+#include <stdio.h>
+
+int main(void) {
+
+	printf("\nEEEEEEEEE\nE\nEEEEE\nE\nEEEEEEEEE\n");
+	printf("\nZZZZZZZZZ\n        z\n    z\nz\nzzzzzzzzz\n");
+	printf("\nW       W\nW       W\nW   W   W\nW  W W  W\nW W   W W\n");
+	return 0;
+
+} // End main
+
+```
 
 
 
