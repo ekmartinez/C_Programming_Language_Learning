@@ -1,4 +1,4 @@
-# Chapter 2 - Selected problems
+# Chapter 2 - Selected Exercises
 
 `2.16 (Arithmetic)` -  Write a program that asks the user to enter two numbers, obtains them from the user and prints their sum, product, difference, quotient and remainder.
 
@@ -161,10 +161,7 @@ int main(void) {
 
 ```
 
-`2.20 (Converting from seconds to hours, minutes and seconds)` -  Write a program that asks the
-user to enter the total time elapsed, in seconds, since an event and converts the time to hours,
-minutes and seconds. The time should be displayed as hours:minutes:seconds. [Hint: Use the
-remainder operator]
+`2.20 (Converting from seconds to hours, minutes and seconds)` -  Write a program that asks the user to enter the total time elapsed, in seconds, since an event and converts the time to hours, minutes and seconds. The time should be displayed as hours minutes:seconds. [Hint: Use theremainder operator]
 
 ```c
 #include <stdio.h>
@@ -180,9 +177,9 @@ int main(void) {
     int minutes = (total_seconds % 3600) / 60;
     int seconds = (total_seconds % 3600) % 60;
 
-    printf("%d:%d:%d", hours, minutes, seconds);
+    printf("\n%d:%d:%d\n", hours, minutes, seconds);
 
-    return 0
+    return 0;
 
 } // End main
 ```

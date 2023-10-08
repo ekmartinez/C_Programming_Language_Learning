@@ -1,71 +1,22 @@
 
+
 #include <stdio.h>
 
 int main(void) {
 
-    int first;
-    int second;
-    int third;
+    int total_seconds;
 
-    printf("Enter three different integers: ");
-    scanf("%d %d %d", &first, &second, &third);
+    printf("How many seconds have passed since event: ");
+    scanf("%d", &total_seconds);
 
-    int sum = first + second + third;
-    int average = sum / 3;
-    int product = first * second * third;
+    int hours = total_seconds / 3600;
+    int minutes = (total_seconds % 3600) / 60;
+    int seconds = (total_seconds % 3600) % 60;
 
-    
-	printf("\nSummary Statistics\n");
-	printf("--------------------------\n");
-	printf("Sum is %d\n", sum);
-    printf("Average is %d\n", average);
-    printf("Product is %d\n", product);
+    printf("\n%d:%d:%d\n", hours, minutes, seconds);
 
-    // min - max
-    
-    // First Number
-    // ----------------------------------------
-    if (first < second){
-        if (first < third){
-            printf("Smallest is %d\n", first);
-        }
-    }
-    if (first > second){
-        if (first > third){
-            printf("Largest is %d\n", first);
-        }
-    }
-    // --------------------------------------
+    return 0;
 
-    // Second Number
-    // ----------------------------------------
-    if (second < first){
-        if (second < third){
-            printf("Smallest is %d\n", second);
-        }
-    }
-    if (second > first){
-        if (second > third){
-            printf("Largest is %d\n", second);
-        }
-    }
-    // --------------------------------------
-
-    // Third Number
-    // ----------------------------------------
-    if (third < first){
-        if (third < second){
-            printf("Smallest is %d\n", third);
-        }
-    }
-    if (third > first){
-        if (third > second){
-            printf("Largest is %d\n", third);
-        }
-    }
-    // -------------------------------------
-    
-	printf("--------------------------\n");
 } // End main
 
 
