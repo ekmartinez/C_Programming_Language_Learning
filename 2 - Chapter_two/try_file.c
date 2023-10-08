@@ -1,36 +1,31 @@
 
 #include <stdio.h>
 
+// Prompts for two numbers and prints arithmetics
 int main(void) {
-	
-	int weight; // Pounds
-	int height; // Inches
-	int FACTOR = 703;
-	int bmi;
 
-	printf("\n-----Body Mass Index Calculator-----\n");
-	
-	printf("\nEnter weight >>> ");
-	scanf("%d", &weight);
-	
-	printf("Enter height >>> ");
-	scanf("%d", &height);
-	
-	bmi = (weight * FACTOR) / ( height * height);
+    int num1;
+    int num2;
 
-	printf("\nBased on your inputs, you BMI is: %d\n", bmi);
+    printf("Enter two numbers with the largest first: ");
+    scanf("%d %d", &num1, &num2);
 
-	printf("\nBMI VALUES\n");
-	printf("Underweight: less than 18.5\n");
-	printf("Normal: between 18.5 and 24.9\n");
-	printf("Overweight: between 25 and 29.9\n");
-	printf("Obese: 30 or greater\n");
-	printf("-------------------------------------\n");
-	printf("\nSource: Department of Health and Human Services/National Institutes of Health	");
+    int sum = num1 + num2;
+    int product = num1 * num2;
+    int difference = num1 - num2;
+    int quotient = num1 / num2;
+    int remainder = num1 % num2;
+    
+    printf("\nSummary Arithmethics\n");
+    printf("-------------------\n");
+    printf("Sum: %d\n", sum);
+    printf("Product: %d\n", product);
+    printf("Difference: %d\n", difference);
+    printf("Quotient: %d\n", quotient);
+    printf("Remainder: %d\n", remainder);
+    printf("-------------------\n");
 
-	return 0;
-}
-
+} // End main
 /*
 
 EEEEEEEEE
