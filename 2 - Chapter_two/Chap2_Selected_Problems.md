@@ -396,6 +396,47 @@ Number	Square	Cube
 
 ```
 
+Create a BMI calculator application that reads the user’s weight in pounds and height in inches (or, if you prefer, the user’s weight in kilograms and height in meters), then calculates and displays the user’s body mass index. Also, the application should display the following information fromthe Department of Health and HumanServices/National Institutes of Health so the user can evaluate his/her BMI.  [Note: In this chapter, you learned to use the int type to represent whole numbers. The BMI calculations when done with int values will both produce whole-number results.]
+
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int weight; // Pounds
+	int height; // Inches
+	int FACTOR = 703;
+	int bmi;
+
+	printf("\n-----Body Mass Index Calculator-----\n");
+	
+	printf("\nEnter weight >>> ");
+	scanf("%d", &weight);
+	
+	printf("Enter height >>> ");
+	scanf("%d", &height);
+	
+	bmi = (weight * FACTOR) / ( height * height);
+
+	printf("\nBased on your inputs, you BMI is: %d\n", bmi);
+
+	printf("\nBMI VALUES\n");
+	printf("Underweight: less than 18.5\n");
+	printf("Normal: between 18.5 and 24.9\n");
+	printf("Overweight: between 25 and 29.9\n");
+	printf("Obese: 30 or greater\n");
+	printf("-------------------------------------\n");
+	printf("\nSource: Department of Health and Human Services/National Institutes of Health	");
+
+	return 0;
+}
+```
+
+
+
+
+
+
 
 
 

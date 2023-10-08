@@ -1,39 +1,32 @@
-/*
-2.31 (Table of Squares and Cubes) Using only the techniques you learned in this chapter, write
-a program that calculates the squares and cubes of the numbers from 0 to 10 and uses tabs to print
-the following table of values:
-*/
-
 
 #include <stdio.h>
 
 int main(void) {
+	
+	int weight; // Pounds
+	int height; // Inches
+	int FACTOR = 703;
+	int bmi;
 
-	int zero = 0;
-	int one = 1;
-	int two = 2;
-	int three = 3;
-	int four = 4;
-	int five = 5;
-	int six = 6;
-	int seven = 7;
-	int eight = 8;
-	int nine = 9;
-	int ten = 10;
+	printf("\n-----Body Mass Index Calculator-----\n");
+	
+	printf("\nEnter weight >>> ");
+	scanf("%d", &weight);
+	
+	printf("Enter height >>> ");
+	scanf("%d", &height);
+	
+	bmi = (weight * FACTOR) / ( height * height);
 
-	printf("Number\tSquare\tCube\n");
-	printf("%d\t%d\t%d\n", zero, (zero * zero), (zero * zero * zero));
-	printf("%d\t%d\t%d\n", one, (one * one), (one * one * one));
-	printf("%d\t%d\t%d\n", two, (two * two), (two * two * two));
-	printf("%d\t%d\t%d\n", three, (three * three), (three * three * three));
-	printf("%d\t%d\t%d\n", four, (four * four), (four * four * four));
-	printf("%d\t%d\t%d\n", five, (five * five), (five * five * five));
-	printf("%d\t%d\t%d\n", six, (six * six), (six * six * six));
-	printf("%d\t%d\t%d\n", seven, (seven * seven), (seven * seven * seven));
-	printf("%d\t%d\t%d\n", eight, (eight * eight), (eight * eight * eight));
-	printf("%d\t%d\t%d\n", nine, (nine * nine), (nine * nine * nine));
-	printf("%d\t%d\t%d\n", ten, (ten * ten), (ten * ten * ten));
+	printf("\nBased on your inputs, you BMI is: %d\n", bmi);
 
+	printf("\nBMI VALUES\n");
+	printf("Underweight: less than 18.5\n");
+	printf("Normal: between 18.5 and 24.9\n");
+	printf("Overweight: between 25 and 29.9\n");
+	printf("Obese: 30 or greater\n");
+	printf("-------------------------------------\n");
+	printf("\nSource: Department of Health and Human Services/National Institutes of Health	");
 
 	return 0;
 }
