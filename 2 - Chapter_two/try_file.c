@@ -1,51 +1,42 @@
-
 /*
- (Separating Digits in an Integer) Write a program that inputs one five-digit number, sep-
-arates the number into its individual digits and prints the digits separated from one another by three
-spaces each. [Hint: Use combinations of integer division and the remainder operation.] For exam-
-ple, if the user types in 42139, the program should print 4   2   1   3   9
+2.31 (Table of Squares and Cubes) Using only the techniques you learned in this chapter, write
+a program that calculates the squares and cubes of the numbers from 0 to 10 and uses tabs to print
+the following table of values:
 */
 
-`#include <stdio.h>
+
+#include <stdio.h>
 
 int main(void) {
 
-	int num;
-	int digit;
-	int remainder;
+	int zero = 0;
+	int one = 1;
+	int two = 2;
+	int three = 3;
+	int four = 4;
+	int five = 5;
+	int six = 6;
+	int seven = 7;
+	int eight = 8;
+	int nine = 9;
+	int ten = 10;
 
-	printf("Enter a five digit number >>> ");
-	scanf("%d", &num);
+	printf("Number\tSquare\tCube\n");
+	printf("%d\t%d\t%d\n", zero, (zero * zero), (zero * zero * zero));
+	printf("%d\t%d\t%d\n", one, (one * one), (one * one * one));
+	printf("%d\t%d\t%d\n", two, (two * two), (two * two * two));
+	printf("%d\t%d\t%d\n", three, (three * three), (three * three * three));
+	printf("%d\t%d\t%d\n", four, (four * four), (four * four * four));
+	printf("%d\t%d\t%d\n", five, (five * five), (five * five * five));
+	printf("%d\t%d\t%d\n", six, (six * six), (six * six * six));
+	printf("%d\t%d\t%d\n", seven, (seven * seven), (seven * seven * seven));
+	printf("%d\t%d\t%d\n", eight, (eight * eight), (eight * eight * eight));
+	printf("%d\t%d\t%d\n", nine, (nine * nine), (nine * nine * nine));
+	printf("%d\t%d\t%d\n", ten, (ten * ten), (ten * ten * ten));
 
-	// First Digit
-	digit = num / 10000;
-	remainder = num % 10000;
-	printf("%d   ", digit);
-	
-	// Second Digit
-	digit = remainder / 1000;
-	remainder = remainder % 1000;
-	printf("%d   ", digit);
-	
-	// Third Digit
-	digit = remainder / 100;
-	remainder = remainder % 100;
-	printf("%d   ", digit);
-
-    /// Fourth Digit
-	digit = remainder / 10;
-	remainder = (remainder % 10) % 10;
-	printf("%d   ", digit);
-	printf("%d   \n", remainder);
 
 	return 0;
 }
-
-
-
-
-
-
 
 /*
 
