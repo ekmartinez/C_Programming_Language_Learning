@@ -30,10 +30,10 @@ while not sentinel
 	Input month
 	Input collections
 
+	sales = collections / (1 + county_rate + state_rate)
 	county_tax = sales * 5%
 	state_tax = sales * 10%
 	total_tax = county_tax + state_tax
-	sales = collections - total_tax
 
 	Print Results
  */
@@ -55,20 +55,19 @@ int main(void) {
 
 	// Processing phase
 	while (collections != -1) {
-		printf("%s", "Enter total amount collected (-1 to quit): ");
+		// Program exit is not working properly
+		printf("%s", "\nEnter total amount collected (-1 to quit): ");
 		scanf("%d", &collections);
 
 		printf("%s", "Enter name of month: ");
 		scanf("%99s", month);
+		
+		sales = (float)collections / (1 + county_rate + state_rate); 
+		county_tax = sales * county_rate;
+		state_tax = sales * state_rate;
+		total_tax = county_tax + state_tax;
 
 		// Termination phase
-		// TODO: TAX BASED ON SALES, NEED TO SOLVE FOR SALES
-		county_tax = (float) collections * county_rate;
-		state_tax = (float) collections * state_rate;
-		total_tax = county_tax + state_tax;
-		sales = (float) collections - total_tax;
-
-
 		printf("Total Collections: $%.2f\n", (float)collections);
 		printf("Sales: $%.2f\n", sales);
 		printf("County Sales Tax: $%.2f\n", county_tax);
@@ -77,23 +76,3 @@ int main(void) {
 	}	
 }
 
-/*
-Output:
-
-Enter total amount collected (-1 to quit): 45678
-Enter name of month: January
-Total Collections: $ 45678.00
-Sales: $ 41906.42
-County Sales Tax: $ 2095.32
-State Sales Tax: $ 1676.26
-Total Sales Tax Collected: $ 3771.58
-
-Enter total amount collected (-1 to quit): 98000
-Enter name of month: February
-Total Collection: $ 98000
-Sales: $ 89908.26
-County Sales Tax: $ 4495.41
-State Sales Tax: $ 3596.33
-Total Sales Tax Collected: $ 8091.74
-Enter total amount collected (-1 to quit): -1
-*/
