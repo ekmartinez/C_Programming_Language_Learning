@@ -41,36 +41,41 @@ while not sentinel
 #include <stdio.h>
 
 
-// Initilize Phase
-int collections = 0;
-int sales = 0;
-int county_tax = 0;
-int state_tax = 0;
-int total_tax = 0;
+int main(void) {
+
+	// Initilize Phase
+	char month[100];
+	int collections = 0;
+	float county_rate = .05;
+	float state_rate = .04;
+	float county_tax = 0;
+	float state_tax = 0;
+	float total_tax = 0;
+	float sales = 0;
+
+	// Processing phase
+	while (collections != -1) {
+		printf("%s", "Enter total amount collected (-1 to quit): ");
+		scanf("%d", &collections);
+
+		printf("%s", "Enter name of month: ");
+		scanf("%99s", month);
+
+		// Termination phase
+		// TODO: TAX BASED ON SALES, NEED TO SOLVE FOR SALES
+		county_tax = (float) collections * county_rate;
+		state_tax = (float) collections * state_rate;
+		total_tax = county_tax + state_tax;
+		sales = (float) collections - total_tax;
 
 
-// Processing phase
-while (collections != -1) {
-	printf("%s", "Enter total amount collected (-1 to quit): ");
-	scanf("%d", &collections);
-
-
+		printf("Total Collections: $%.2f\n", (float)collections);
+		printf("Sales: $%.2f\n", sales);
+		printf("County Sales Tax: $%.2f\n", county_tax);
+		printf("State Sales Tax: $%.2f\n", state_tax);
+		printf("Total Sales Tax Collected: $%.2f\n", total_tax);
+	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 Output:
