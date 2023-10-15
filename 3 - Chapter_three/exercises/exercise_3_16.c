@@ -83,5 +83,29 @@ int main(void) {
 			printf("Total Sales Tax Collected: $%.2f\n", total_tax);
 		}
 	}	
+
+	return 0;
 }
 
+/*
+
+test:
+
+ * Enter total amount collected (-1 to quit): 45678
+Enter name of month: January
+Total Collections: $ 45678.00
+Sales: $ 41906.42
+County Sales Tax: $ 2095.32
+State Sales Tax: $ 1676.26
+Total Sales Tax Collected: $ 3771.58
+
+Enter total amount collected (-1 to quit): 98000
+Enter name of month: February
+Total Collection: $ 98000
+Sales: $ 89908.26
+County Sales Tax: $ 4495.41
+State Sales Tax: $ 3596.33
+Total Sales Tax Collected: $ 8091.74
+Enter total amount collected (-1 to quit): -1
+
+*/
