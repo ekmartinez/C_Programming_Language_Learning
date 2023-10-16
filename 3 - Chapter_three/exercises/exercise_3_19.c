@@ -48,13 +48,15 @@ while (not sentinel)
 
 int main(void) 
 {
+	// Initialization Phase
 	float loan_principal = 0;
 	float interest_rate = 0;
 	int loan_term_days = 0;
 	float interest_charge = 0;
 
+	// Processing Phase
 	while(loan_principal != -1) {
-		printf("%s", "Enter loan principal (-1 to end): ");
+		printf("%s", "\nEnter loan principal (-1 to end): ");
 		scanf("%f", &loan_principal);
 
 		if (loan_principal == - 1){
@@ -62,15 +64,16 @@ int main(void)
 			break;
 		}
 		else {
-			
 		printf("%s", "Enter interest rate: ");
 		scanf("%f", &interest_rate);
 		
-		printf("%s", "Enter interest rate: ");
-		scanf("%f", &interest_rate);
+		printf("%s", "Enter term of the loan in days: ");
+		scanf("%d", &loan_term_days);
 
+		interest_charge = loan_principal * interest_rate * loan_term_days / 365; 
 
-
+		// Termination Phase
+		printf("The interest charge is $%.2f", interest_charge);
 
 		}
 
@@ -78,6 +81,8 @@ int main(void)
 }
 
 /*
+Test:
+
 Enter loan principal (-1 to end): 1000.00
 Enter interest rate: .1
 Enter term of the loan in days: 365
