@@ -12,8 +12,7 @@ Pseudocode
 
 top
 ----
-Develop a program that will determine the gross pay for each of several employees. The company pays “straight time” 
-for the first 40 hours worked by each employee and pays “time-and-a-half” for all hours worked in excess of 40 hours. 
+Develop a program that will determine the gross pay for each of several employees.
 
 First Refinement
 ----------------
