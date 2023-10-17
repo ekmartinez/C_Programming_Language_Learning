@@ -80,7 +80,7 @@ int main(void)
 				regular_hours = total_hours;
 				gross_pay = regular_hours *hourly_rate;
 			}
-			else if(total_hours > 40) {
+			else if (total_hours > 40) {
 				printf("%s", "Enter hourly rate of the worker ($00.00): ");
 				scanf("%f",&hourly_rate);
 
