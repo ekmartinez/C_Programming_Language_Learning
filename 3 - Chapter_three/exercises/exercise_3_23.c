@@ -55,19 +55,16 @@ int main(void)
 	int number = 0;
 	int largest = 0;
 
-	while(counter >= 0) {
+	while(counter > 0) {
 		printf("Input a non-negative integers >>> ");
 		scanf("%d", &number);
 
 		if (number > largest) {
 			largest = number;
-			counter -= 1;
 		}
-
-		printf("\nCounter: %d\n", counter);
+		counter--;
 	}
 
-	printf("\nCounter: %d\n", counter);
 	printf("\nThe largest number is: %d\n", largest);
 
 	return 0;
