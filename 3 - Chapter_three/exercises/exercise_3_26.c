@@ -53,11 +53,17 @@ int main(void)
 
 		if (number > largest) {
 			largest = number;
+
+			if (number > second_largest) {
+				second_largest = number;
+			}
 		}
+
 		counter--;
 	}
 
 	printf("\nThe largest number is: %d\n", largest);
+	printf("The the second largest number is: %d\n", second_largest);
 
 	return 0;
 }
