@@ -17,7 +17,6 @@ int main(void)
 			printf("You have entered an invalid value, valid sides are (1 - 20)\n");
 		}
 		else {
-
 			printf("\n");
 
 			int h_side = side;
