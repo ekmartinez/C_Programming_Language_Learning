@@ -49,9 +49,11 @@ The sentinel value indicates “end of data.” The sentinel is entered after al
 
 The general format of the for statement is
 
-`for` (*initialization*; *condition*; *increment*) {
+```c
+for (*initialization*; *condition*; *increment*) {
     *statement*
 }
+```
 
 Where the *initialization* expression initializes the loop-control variable, the *condition* expression is the loop-continuation condition and the *increment* expression increments the control variable. The comma operator is most often used in the `for` statement. Its primary use is to enable you to use multiple initialization and/or multiple increment expressions. For example, there may be two control variables in a single `for` statement that must be initialized and incremented.
 
