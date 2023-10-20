@@ -37,3 +37,6 @@ int main(void)
 
 	return 0;
 }
+
+// To compile this file with a linker to math.h you should proceed as:
+// gcc file.c -o file -lm
