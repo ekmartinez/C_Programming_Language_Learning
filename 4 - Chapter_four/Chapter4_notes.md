@@ -50,8 +50,8 @@ The sentinel value indicates “end of data.” The sentinel is entered after al
 The general format of the for statement is
 
 ```c
-for (*initialization*; *condition*; *increment*) {
-    *statement*
+for (initialization; condition; increment) {
+    statement
 }
 ```
 
