@@ -12,7 +12,6 @@ where the 7 indicates that the subsequent 7 values are to be summed.
 
 int main(void)
 {
-	
 	unsigned int count = 0;
 	int sum = 0;
 	float average = 0;
