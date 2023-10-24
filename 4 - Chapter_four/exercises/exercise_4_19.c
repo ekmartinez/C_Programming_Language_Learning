@@ -26,8 +26,21 @@ int main(void)
 
 {
 	int product_number;
+	float product1_total;
+	float product2_total;
+	float product3_total;
+	float product4_total;
+	float product5_total;
 
-	while ((product_number = getchar()) != EOF) {
+	puts("Enter a product number below:");
+
+	while ((product_number = getchar()) != EOF && product_number != '\n') {
+
+		// Convert character to integer
+		product_number -= '0';
+
+	//	printf("\nEnter a product number >>> ");
+	//	scanf("%d", &product_number); 
 		
 		// Determine which product number was entered
 		switch (product_number) {
