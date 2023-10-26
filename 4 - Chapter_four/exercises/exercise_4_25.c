@@ -7,11 +7,20 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
+
+	for (unsigned int decimal = 1; decimal < 257; decimal++) {
+
+		
+		
+		printf("%d\t%d\t%o\t%x\n", decimal, decimal, decimal, decimal);
+
 
 	}
 
-
 	return 0;
-
 }
+
+
+
