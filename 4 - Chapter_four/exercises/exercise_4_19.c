@@ -23,39 +23,77 @@ Your program should calculate and display the total retail value of all products
 #include <stdio.h>
 
 int main(void)
-
 {
-	int product_number;
-	float product1_total;
-	float product2_total;
-	float product3_total;
-	float product4_total;
-	float product5_total;
+	unsigned int product1_total = 0;
+	unsigned int product2_total = 0;
+	unsigned int product3_total = 0;
+	unsigned int product4_total = 0;
+	unsigned int product5_total = 0;
 
-	puts("Enter a product number below:");
+	puts("Enter the letter grad.");
+	puts("Enter the EOF character to end input.");
 
-	while ((product_number = getchar()) != EOF && product_number != '\n') {
+	int product_number; 
 
-		// Convert character to integer
-		product_number -= '0';
-
-	//	printf("\nEnter a product number >>> ");
-	//	scanf("%d", &product_number); 
+	// loop until user types end-of-file key sequence
+	while ((product_number = getchar()) != EOF) {
 		
-		// Determine which product number was entered
+		
 		switch (product_number) {
+			
+		case '1': 
+			++product1_total;
+			break;
 
-			case 1:
-				printf("\nCase 1\n");
-				break;
-				 
-			case 2:
-				printf("\nCase 2\n");
-				break;
+		case '2':  
+			++product2_total;
+			break; 
 
-			default:
-				printf("\nCase try\n");
-				break;
+		case '3': 
+			++product3_total;
+			break; 
+
+		case '4': 
+			++product4_total;
+			break; 
+
+		case '5': 
+			++product5_total;
+			break; 
+
+		case '\n':
+		case '\t': // tabs
+		case ' ': // and spaces in input
+			break;
+
+		default: 
+			printf("%s", "Incorrect letter grade entered.");
+			puts("Enter a new grade.");
+			break; // optional; will exit switch anyway
 		}
-	}
+	} // end while
+
+	// output summary of results
+	puts("\nTotals sales for each product line:");
+	printf("A: %u\n", product1_total);
+	printf("B: %u\n", product2_total);
+	printf("C: %u\n", product3_total);
+	printf("D: %u\n", product4_total);
+	printf("F: %u\n", product5_total);
 }
+
+// On linux the EOF indicator is entered by typing <Ctrl> d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
