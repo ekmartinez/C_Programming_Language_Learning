@@ -1,39 +1,22 @@
-// Write a Programmer-defined function named maximum to determine and return
-// the largest of three integers.
-//
+// Creating and using a prograsmmer-defined function.
+
 
 #include <stdio.h>
 
-int maximum(int x, int y, int z); // function prototype
+int square(int y);
 
 int main(void)
 {
-	int number1; // first integer entered by the user
-	int number2; // second integer entered by the user
-	int number3; // third integer entered by the user
-
-	printf("%s", "Enter three integers: ");
-	scanf("%d%d%d", &number1, &number2, &number3);
+	// loop 10 times and calculate an output square of x each time
+	for (int x = 1; x <= 10; ++x) {
+		printf("%d ", square(x)); // function call
+	}
 	
-	// number1, number2 and number3 are arguments
-	// to the maximum function call
-	
-	printf("Maximum is: %d\n", maximum(number1, number2, number3));
+	puts("");
 }
 
-// Function maximum definition
-// // x, y and z are parameters
-int maximum(int x, int y, int z)
+// square function definition returns the square of its parameter
+int square(int y) // y is a copy of the argument to the function
 {
-	int max = x; // assume x is target
-	
-		if (y > max) { // if y is larger than max,
-			max = y; // assign y to max
-		}
-		
-		if (z > max) { // if z is larger than max,
-			max = z; // assign z to max
-		}
-
-		return max; // max is largest value
+	return y * y; // returns the square of y as an int
 }
