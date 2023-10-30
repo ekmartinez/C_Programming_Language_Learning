@@ -257,4 +257,22 @@ The C standard includes additional headers and You can create custom headers. Pr
 
 (More of this on the pointers chapter)
 
+**Enumerations** - An enumeration, introduced by the keyword enum, is a set of integer constants represented by identifiers. Enumeration constants help make programs more readable and easier to maintain. Values in an enum start with 0 and are incremented by 1. The identifiers in an enumeration must be unique, but the values may be duplicated. It is a user-defined data type used to assign names to integral constants, making the code more readable and self-documenting. Enums are particularly useful when you have a set of related constant values that represent distinct states, options, or categories.
 
+Example:
+
+```c
+#include <stdio.h>
+
+enum Weekday { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY };
+
+int main() {
+    enum Weekday today = WEDNESDAY;
+    printf("Today is day number %d\n", today);
+    return 0;
+}
+
+Output:
+
+Today is day number 3
+```
