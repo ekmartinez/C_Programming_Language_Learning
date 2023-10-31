@@ -276,3 +276,41 @@ Output:
 
 Today is day number 3
 ```
+
+## Storage Classes
+
+The attributes of variables include name, type, size and value. We also use identifiers as names for user-defined functions. Actually, each identifier in a program has other attributes, including storage class, storage duration, scope and linkage.
+
+C provides the storage class specifiers auto, register, extern and static. An identifier’s storage class determines its storage duration, scope and linkage. (Note: Keyword register is archaic and should not be used.
+
+**storage duration** - is the period during which the identifier exists in memory. Some exist briefly, some are repeatedly created and destroyed, and others exist for the program’s entire execution.
+
+**scope** - is where the identifier can be referenced in a program. Some can be referenced throughout a program, others from only portions of a program.
+
+**linkage** - determines for a multiple-source-file program whether the identifier is known only in the current source file or in any source file with proper declarations.
+
+The storage-class specifiers can be split between `automatic storage duration` and `static storage duration`. Keyword `auto` is used to declare variables of automatic storage duration.
+
+**automatic storage duration** - are created when program control enters the block in which they’re defined; they exist while the block is active, and they’re destroyed when program control exits the block. Only variables can have automatic storage duration. A function’s *local variables* (those declared in the parameter list or function body) normally have automatic storage duration. Keyword auto explicitly declares variables of automatic storage duration. *Local variables* have automatic storage duration by default, so keyword auto is rarely used.
+
+
+##Scope Rules
+
+The scope of an identifier is the portion of the program in which the identifier can be referenced. For example, when we define a local variable in a block, it can be referenced only following its definition in that block or in blocks nested within that block.
+
+The four identifier scopes are:
+
+1. **Function scope**
+    * Labels (identifiers followed by a colon such as start:) are the only identifiers with function scope. Labels can be used anywhere in the function in which they appear, but cannot be referenced outside the function body. Labels are used in switch statements (as case labels) and in goto statements. Labels are hidden in the function in which they’re defined. This hiding, more formally called information hiding is a means of implementing the `principle of least privilege`
+    * Principle of least privilege - a fundamental principle of good software engineering. In the context of anapplication, the principle states that code should be granted only the amount of privilege and access that it needs to accomplish its designated task, but no more.
+
+2. **File scope**  
+    * An identifier declared outside any function has file scope. Such an identifier is “known” (i.e., accessible) in all functions from the point at which the identifier is declared until the end of the file. Global variables, function definitions, and function prototypes placed outside a function all have file scope.
+
+3. **Block scope** 
+    * Identifiers defined inside a block have block scope. Block scope ends at the terminating right brace (}) of the block. Local variables defined at the beginning of a function have block scope, as do function parameters, which are considered local variables by the function. Local variables declared static still have block scope, even though they exist from before program startup. Thus, storage duration does not affect the scope of an identifier.
+
+4. **Function-prototype scope** 
+    * he only identifiers with function-prototype scope are those used in the parameter list of a function prototype. Function prototypes do not require names in the parameter list—only types are required. If a name is used in the parameter list of a function prototype, the compiler ignores the name. Identifiers used in a function prototype can be reused elsewhere in the program without ambiguity.
+
+
