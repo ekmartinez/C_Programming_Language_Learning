@@ -228,19 +228,33 @@ After square calculates the square of its argument, it needs to return to main�
 Each standard library has a corresponding header containing the function prototypes for all the functions in that library and definitions of various data types and constants needed by those functions. The following lists alphabetically some of the standard library headers that may be included in programs:
 
 *<assert.h>* - Contains information for adding diagnostics that aid program debugging.
+
 *<ctype.h>* - Contains function prototypes for functions that test characters for certain properties, and function prototypes for functions that can be used to convert lowercase letters to uppercase letters and vice versa.
+
 *<errno.h>* - Defines macros that are useful for reporting error conditions.
+
 *<float.h>* - Contains the floating-point size limits of the system.
+
 *<limits.h>* - Contains the integral size limits of the system.
+
 *<locale.h>* - Contains function prototypes and other information that enables a program to be modified for the current locale on which it’s running. The notion of locale enables the computer system to handle different conventions for expressing data such as dates, times, currency amounts and large numbers throughout the world.
+
 *<math.h>* - Contains function prototypes for math library functions.
+
 *<setjmp.h>* - Contains function prototypes for functions that allow bypassing of the usual function call and return sequence.
+
 *<signal.h>* - Contains function prototypes and macros to handle various conditions that may arise during program execution.
+
 *<stdarg.h>* - Defines macros for dealing with a list of arguments to a function whose number and types are unknown.
+
 *<stddef.h>* - Contains common type definitions used by C for performing calculations.
+
 *<stdio.h>* - Contains function prototypes for the standard input/output library functions, and information used by them.
+
 *<stdlib.h>* - Contains function prototypes for conversions of numbers to text and text to numbers, memory allocation, random numbers and other utility functions.
+
 *<string.h>* - Contains function prototypes for string-processing functions.
+
 *<time.h>* - Contains function prototypes and types for manipulating the time and date.
 
 The C standard includes additional headers and You can create custom headers. Programmer-defined headers should also use the .h filename extension. A programmer-defined header can be included by using the #include preprocessor directive.
@@ -293,7 +307,6 @@ The storage-class specifiers can be split between `automatic storage duration` a
 
 **automatic storage duration** - are created when program control enters the block in which they’re defined; they exist while the block is active, and they’re destroyed when program control exits the block. Only variables can have automatic storage duration. A function’s *local variables* (those declared in the parameter list or function body) normally have automatic storage duration. Keyword auto explicitly declares variables of automatic storage duration. *Local variables* have automatic storage duration by default, so keyword auto is rarely used.
 
-
 ##Scope Rules
 
 The scope of an identifier is the portion of the program in which the identifier can be referenced. For example, when we define a local variable in a block, it can be referenced only following its definition in that block or in blocks nested within that block.
@@ -311,6 +324,21 @@ The four identifier scopes are:
     * Identifiers defined inside a block have block scope. Block scope ends at the terminating right brace (}) of the block. Local variables defined at the beginning of a function have block scope, as do function parameters, which are considered local variables by the function. Local variables declared static still have block scope, even though they exist from before program startup. Thus, storage duration does not affect the scope of an identifier.
 
 4. **Function-prototype scope** 
-    * he only identifiers with function-prototype scope are those used in the parameter list of a function prototype. Function prototypes do not require names in the parameter list—only types are required. If a name is used in the parameter list of a function prototype, the compiler ignores the name. Identifiers used in a function prototype can be reused elsewhere in the program without ambiguity.
+    * The only identifiers with function-prototype scope are those used in the parameter list of a function prototype. Function prototypes do not require names in the parameter list—only types are required. If a name is used in the parameter list of a function prototype, the compiler ignores the name. Identifiers used in a function prototype can be reused elsewhere in the program without ambiguity.
+
+## Recursion
+
+A `recursive function` is one that calls itself either directly or indirectly through another function. Recursive problem-solving approaches have a number of elements in common. A recursive function is called to solve a problem. The function actually knows how to solve only the simplest case(s), or so-called `base case(s)`. 
+
+If the function is called with a base case, the function simply returns a result. If the function is called with a more complex problem, the function typically divides the problem into two conceptual pieces: a piece that the function knows how to do and a piece that it does not know how to do. To make recursion feasible, the latter piece must resemble the original problem, but be a slightly simpler or smaller version. Because this new problem looks like the original problem, the function launches (calls) a fresh copy of itself to work on the smaller problem—this is referred to as a `recursive call` or the `recursion step`. The recursion step also includes a return statement, because its result will be combined with the portion of the problem the function knew how to solve to form a result that will be passed back to the original caller.
+
+The recursion step executes while the original call to the function is paused, waiting for the result from the recursion step. The recursion step can result in many more such recursive calls, as the function keeps dividing each problem with which it’s called into two conceptual pieces. For the recursion to terminate, each time the function calls itself with a slightly simpler version of the original problem, this sequence of smaller problems must eventually converge on the base case. When the function recognizes the base case, it returns a result to the previous copy of the function, and a sequence of returns ensues all the way up the line until the original call of the function eventually returns the final result to its caller.
+
+Recursion has many negatives, first recursion is a complex topic. It repeatedly invokes the mechanism, and consequently the overhead, of function calls. This can be expensive in both processor time and memory space. Each recursive call causes another copy of the function (actually only the function’s variables) to be created; this can consume considerable memory. Iteration normally occurs within a function, so the overhead of repeated function calls and extra memory assignment is omitted. So why choose recursion?, that's the question.
+
+## Final Thougths on Functions
+Dividing a large program into functions promotes good software engineering. But it has a price. A heavily functionalized program—as compared to a monolithic (i.e., one-piece) program without functions—makes potentially large numbers of function calls, and these consume execution time on a computer’s processor(s). Although monolithic programs may perform better, they’re more difficult to program, test, debug, maintain, and evolve.
+
+Today’s hardware architectures are tuned to make function calls efficient, C compilers help optimize your code and today’s hardware processors are incredibly fast. For the vast majority of applications and software systems you’ll build, concentrating on good software engineering will be more important than programming for high performance. Nevertheless, in many C applications and systems, such as game programming, real-time systems, operating systems and embedded systems, performance is crucial.
 
 
