@@ -307,7 +307,7 @@ The storage-class specifiers can be split between `automatic storage duration` a
 
 **automatic storage duration** - are created when program control enters the block in which they’re defined; they exist while the block is active, and they’re destroyed when program control exits the block. Only variables can have automatic storage duration. A function’s *local variables* (those declared in the parameter list or function body) normally have automatic storage duration. Keyword auto explicitly declares variables of automatic storage duration. *Local variables* have automatic storage duration by default, so keyword auto is rarely used.
 
-##Scope Rules
+## Scope Rules
 
 The scope of an identifier is the portion of the program in which the identifier can be referenced. For example, when we define a local variable in a block, it can be referenced only following its definition in that block or in blocks nested within that block.
 
