@@ -2,12 +2,12 @@
 
 5.9 (Car Rental Services) A car rental service charges a
 
-minimum fee of $25.00 to rent a car for 8 hours, 
-and charges an additional $5 per hour after 8 hours. 
-The maximum charge per day is $50 exclusive of service tax. 
-The company charges an additional $0.50 per hour as service tax. 
-Assume that no car is rented for more than 72 hours at a time. 
-If a car is rented for more than 24 hours, then rental is calculated on a daily basis. 
+- minimum fee of $25.00 to rent a car for 8 hours, 
+- and charges an additional $5 per hour after 8 hours. 
+- The maximum charge per day is $50 exclusive of service tax. 
+- The company charges an additional $0.50 per hour as service tax. 
+- Assume that no car is rented for more than 72 hours at a time. 
+- If a car is rented for more than 24 hours, then rental is calculated on a daily basis. 
 
 Write a program that calculates and prints the rental charges for each of
 three customers who rented cars from this agency yesterday. You should enter the hours for which the
@@ -63,8 +63,11 @@ int main(void)
 // Function Definition
 double calculateCharges(int hours) {
 	
-	double MINIMUM_HOURS = 8;
+	int MINIMUM_HOURS = 8;
 	double MINIMUM_CHARGE = 25.00; 
+	double MAXIMUM_CHARGE = 50.00; 
+	
+	double CHARGE_ADD_HOUR = 5.00;
 	double SERVICE_TAX = 0.50;
 
 	double preliminary_charge = 0.00;	
@@ -76,13 +79,24 @@ double calculateCharges(int hours) {
 		
 		return final_charge;
 	} 
+	if (hours > 24) {
+		
+	//	ceil(x) - rounds x to the smallest integer not less than x. (ceil(9.2) is 10.0)
+	
+	}
 
-	preliminary_charge = (MINIMUM_CHARGE + (hours - MINIMUM_HOURS)
+	preliminary_charge = MINIMUM_CHARGE + ((hours - MINIMUM_HOURS) * CHARGE_ADD_HOUR);
+	
+	if (preliminary_charge > MAXIMUM_CHARGE) {
+		preliminary_charge = MAXIMUM_CHARGE; 
+	} 
+	
 
-	return final_charge;
+
+
+
+	return 0;
 }
-
-
 
 
 
