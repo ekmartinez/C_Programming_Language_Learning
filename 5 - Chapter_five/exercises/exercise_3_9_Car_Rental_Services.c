@@ -17,6 +17,7 @@ calculateCharges to determine the charges for each customer.
 */
 
 #include <stdio.h>
+#include <math.h>
 
 // function prototype
 double calculateCharges(int hours); 
@@ -58,6 +59,8 @@ int main(void)
 	printf("%d\t%d\t%.2f\n", 2, c2_hours, calculateCharges(c2_hours));
 	printf("%d\t%d\t%.2f\n", 3, c3_hours, calculateCharges(c3_hours));
 	printf("TOTAL\t%d\t%.2f\n\n", total_hours, total_charges);
+
+	return 0;
 }
 
 // Function Definition
@@ -73,33 +76,40 @@ double calculateCharges(int hours) {
 	double preliminary_charge = 0.00;	
 	double final_charge = 0.00;
 
-	if (hours <= 8) { 
+	if (hours <= 8) { // minimum fee of $25.00 to rent a car for 8 hours, 
 
 		final_charge = MINIMUM_CHARGE + (hours * SERVICE_TAX);
 		
 		return final_charge;
 	} 
-	if (hours > 24) {
-		
-	//	ceil(x) - rounds x to the smallest integer not less than x. (ceil(9.2) is 10.0)
-	
-	}
 
-	preliminary_charge = MINIMUM_CHARGE + ((hours - MINIMUM_HOURS) * CHARGE_ADD_HOUR);
-	
-	if (preliminary_charge > MAXIMUM_CHARGE) {
-		preliminary_charge = MAXIMUM_CHARGE; 
+	else if (hours > 72) { //The maximum charge per day is $50 exclusive of service tax. 
+
+		printf("\nThe software assumes that no car is rented for more than 72 hours at a time..\n");
+		return 0;
+	} 
+
+	else if (hours > 24) { //	ceil(x) - rounds x to the smallest integer not less than x. (ceil(9.2) is 10.0)
+		
+		int daily = ceil((float) hours / 24);
+		
+		preliminary_charge = daily * MAXIMUM_CHARGE;
+		final_charge = preliminary_charge * SERVICE_TAX;
+
+		return final_charge;
 	} 
 	
+	// Focus
+	else { // an additional $5 per hour after 8 hours. 
 
-
-
+		preliminary_charge = MINIMUM_CHARGE + ((hours - MINIMUM_HOURS) * CHARGE_ADD_HOUR);
+		
+		if (preliminary_charge > MAXIMUM_CHARGE) {
+			preliminary_charge = MAXIMUM_CHARGE; 
+			
+			return 0;
+		} 
+	}
 
 	return 0;
 }
-
-
-
-
-
-
