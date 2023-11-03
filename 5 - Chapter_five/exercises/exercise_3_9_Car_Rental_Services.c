@@ -97,7 +97,6 @@ double calculateCharges(int hours) {
  		return final_charge;
 	} 
 	
-	// Focus
 	else { // an additional $5 per hour after 8 hours. 
 
 		preliminary_charge = MINIMUM_CHARGE + ((hours - MINIMUM_HOURS) * CHARGE_ADD_HOUR);
@@ -107,12 +106,3 @@ double calculateCharges(int hours) {
 		} 
 	}
 
-/* 
- Test
-
- Car	Hours	Charge
- 1		12		56.00    -- > (Textbook error)
- 2		34		117.00
- 3		48		124.00
- TOTAL	94		297.00
- */
