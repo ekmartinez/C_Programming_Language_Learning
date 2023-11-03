@@ -77,7 +77,7 @@ double calculateCharges(int hours) {
 
 	if (hours <= 8) { // minimum fee of $25.00 to rent a car for 8 hours, 
 
-		preliminary_charge = MAXIMUM_CHARGE; 
+		preliminary_charge = MINIMUM_CHARGE; 
 		final_charge = preliminary_charge + (hours * SERVICE_TAX);
 		return final_charge;
 	} 
@@ -115,3 +115,4 @@ double calculateCharges(int hours) {
  2		34		117.00
  3		48		124.00
  TOTAL	94		297.00
+ */
