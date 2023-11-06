@@ -62,19 +62,13 @@ int main(void) {
 	} 
 	
 	// Header	
-	printf("\n#\tInput\tFloor\t10th\t100\t1000\n");
+	printf("\n#\tInput\tFloor\t10th\t100th\t1000th\n");
 
-	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_1, roundToInteger(value_read_1), roundToTenths(value_read_1), roundtoHundreths(value_read_1), roundToThousandths(value_read_1));
-	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_2, roundToInteger(value_read_2), roundToTenths(value_read_2), roundtoHundreths(value_read_2), roundToThousandths(value_read_2));
-	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_3, roundToInteger(value_read_3), roundToTenths(value_read_3), roundtoHundreths(value_read_3), roundToThousandths(value_read_3));
+	printf("\n1\t%.2f\t%d\t%.2f\t%.3f\t%.4f\n", value_read_1, roundToInteger(value_read_1), roundToTenths(value_read_1), roundtoHundreths(value_read_1), roundToThousandths(value_read_1));
+	printf("\n1\t%.2f\t%d\t%.2f\t%.3f\t%.4f\n", value_read_2, roundToInteger(value_read_2), roundToTenths(value_read_2), roundtoHundreths(value_read_2), roundToThousandths(value_read_2));
+	printf("\n1\t%.2f\t%d\t%.2f\t%.3f\t%.4f\n", value_read_3, roundToInteger(value_read_3), roundToTenths(value_read_3), roundtoHundreths(value_read_3), roundToThousandths(value_read_3));
 
 	return 0;
-
-/*
-For each value read, your program should print the original value, the number rounded to the
-nearest integer, the number rounded to the nearest tenth, the number rounded to the nearest hun-
-dredth, and the number rounded to the nearest thousandth.
-*/
 
 }
 
