@@ -25,6 +25,11 @@ dredth, and the number rounded to the nearest thousandth.
 #include <stdio.h>
 #include <math.h>
 
+int roundToInteger(double number);
+double roundToTenths(double number);
+double roundtoHundreths(double number);
+double roundToThousandths(double number);
+
 int main(void) {
 
 	double value_read_1 = 0.00;
@@ -59,12 +64,35 @@ int main(void) {
 	// Header	
 	printf("\n#\tInput\tFloor\t10th\t100\t1000\n");
 
+	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_1, roundToInteger(value_read_1), roundToTenths(value_read_1), roundtoHundreths(value_read_1), roundToThousandths(value_read_1));
+	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_2, roundToInteger(value_read_2), roundToTenths(value_read_2), roundtoHundreths(value_read_2), roundToThousandths(value_read_2));
+	printf("\n1\t%.2f\t%d\t%.2f\t%3.f\t%4.f\n", value_read_3, roundToInteger(value_read_3), roundToTenths(value_read_3), roundtoHundreths(value_read_3), roundToThousandths(value_read_3));
 
-	printf("\n1\t%.2lf\t%d\t%.2lf\t%.3lf\t%.4lf\n", value_read_1, (int)floor(value_read_1),  floor(value_read_1) / 100,  floor(value_read_1) / 1000,floor(value_read_1) / 10000) ;
+	return 0;
 
-	printf("2\t%.2lf\t%d\t%.2lf\t%.3lf\t%.4lf\n", value_read_2,  (int)floor(value_read_2),  floor(value_read_2) / 100,  floor(value_read_2) / 1000, floor(value_read_2) / 10000) ;
-	
-	printf("3\t%.2lf\t%d\t%.2lf\t%.3lf\t%.4lf\n", value_read_3,  (int)floor(value_read_3), floor(value_read_3) / 100,  floor(value_read_3) / 1000, floor(value_read_3) / 10000) ;
+/*
+For each value read, your program should print the original value, the number rounded to the
+nearest integer, the number rounded to the nearest tenth, the number rounded to the nearest hun-
+dredth, and the number rounded to the nearest thousandth.
+*/
 
 }
 
+int roundToInteger(double number) {
+	int y = (int)floor(number);
+	return y;
+}
+
+double roundToTenths(double number) {
+	double y = floor(number * 10 + .5) / 10;
+	return y;
+}
+double roundtoHundreths(double number) {
+	double y = floor(number * 100 + .5) / 100;
+	return y;
+}
+
+double roundToThousandths(double number) {
+	double y = floor(number * 1000 + .5) / 1000;
+	return y;
+}
