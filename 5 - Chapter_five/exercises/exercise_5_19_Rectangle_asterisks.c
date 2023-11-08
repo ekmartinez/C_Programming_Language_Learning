@@ -8,3 +8,41 @@ the function displays the following
 *****
 *****
 */
+
+#include <stdio.h>
+
+int square(int h, int v);
+
+int main (void)
+{
+	int h_side = 0;
+	int v_side =0;
+
+	printf("\nEnter horizontal side >>> ");
+	scanf("%d", &h_side);
+	printf("Enter vertical side >>> ");
+	scanf("%d", &v_side);
+
+	square(h_side, v_side);
+	
+	return 0;
+}
+
+int square(int h, int v) {
+
+	for (v = v; v > 0; v--) {
+
+		int temp_h = 0;
+
+		for (temp_h = h; temp_h > 0; temp_h--) {
+			printf("*");
+
+		}
+		
+		puts("");
+		
+
+	}
+	return 0;
+
+}
