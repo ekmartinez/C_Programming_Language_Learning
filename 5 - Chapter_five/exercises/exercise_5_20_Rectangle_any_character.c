@@ -24,8 +24,8 @@ int main (void)
 	scanf("%d", &h_side);
 	printf("Enter vertical side >>> ");
 	scanf("%d", &v_side);
-	printf("Enter the Character >>> ");
-	scanf("%c", &character);
+	printf("Enter any Character >>> ");
+	scanf(" %c", &character);
 
 	square(h_side, v_side, character);
 	
@@ -39,7 +39,7 @@ int square(int h, int v, char c) {
 		int temp_h = 0;
 
 		for (temp_h = h; temp_h > 0; temp_h--) {
-			printf("%c", c);
+			printf(" %c", c);
 
 		}
 		
