@@ -39,7 +39,7 @@ int square(int h, int v, char c) {
 		int temp_h = 0;
 
 		for (temp_h = h; temp_h > 0; temp_h--) {
-			printf(" %c", c);
+			printf("%c", c);
 
 		}
 		
