@@ -9,3 +9,45 @@ if the sides are 5 and 4, and fillCharacter is "@", then the function should pri
 @@@@@
 
 */
+
+#include <stdio.h>
+
+int square(int h, int v, char c);
+
+int main (void)
+{
+	int h_side = 0;
+	int v_side =0;
+	char character;
+
+	printf("\nEnter horizontal side >>> ");
+	scanf("%d", &h_side);
+	printf("Enter vertical side >>> ");
+	scanf("%d", &v_side);
+	printf("Enter the Character >>> ");
+	scanf("%c", &character);
+
+	square(h_side, v_side, character);
+	
+	return 0;
+}
+
+int square(int h, int v, char c) {
+
+	for (v = v; v > 0; v--) {
+
+		int temp_h = 0;
+
+		for (temp_h = h; temp_h > 0; temp_h--) {
+			printf("%c", c);
+
+		}
+		
+		puts("");
+		
+
+	}
+	return 0;
+
+}
+
