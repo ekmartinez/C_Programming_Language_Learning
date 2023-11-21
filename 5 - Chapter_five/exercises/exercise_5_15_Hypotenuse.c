@@ -22,6 +22,7 @@ int main(void) {
 	double side2 = 0.00;
 	
 	puts("\nHypotenuse Calculator\n-----------------------");
+
 	for (unsigned int counter  = 1; counter < 3; ++counter) {
 
 		double side = 0.00;
