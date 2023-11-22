@@ -18,6 +18,8 @@ int main(void)
 	unsigned int heads = 0;
 	unsigned int tails = 0;
 
+	srand(time(NULL));
+
 	for (unsigned int counter = 1; counter < 101; counter++) {
 
 		int random_flip = flip();
@@ -41,8 +43,6 @@ int main(void)
 
 int flip(void) {
 	
-	//time_t t;
-	//srand((unsigned) time(&t));
 	int random_try = rand() % 2;
 	return random_try;
 }
