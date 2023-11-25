@@ -88,5 +88,6 @@ printf("%s\n, string2); // prints string2
 ```
 
 
+## Static Local Arrays and Automatic Local Arrays
 
-
+A static local variable exists for the duration of the program but is visible only in the function body. We can apply static to a local array definition so the array is not created and initialized each time the function is called and the array is not destroyed each time the function is exited in the program. This reduces program execution time, particularly for programs with frequently called functions that contain large arrays. Arrays that are static are initialized once at program startup. If you do not explicitly initialize a static array, that array’s elements are initialized to zero by default.
