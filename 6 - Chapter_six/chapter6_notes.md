@@ -53,5 +53,40 @@ Consider the following definition:
 #define SIZE 5
 ```
 
-This #define preprocessor directive defines a symbolic constant SIZE whose value is 5. A symbolic constant is an identifier that’s replaced with replacement text by the C preprocessor before the program is compiled. When the program is preprocessed, all occurrences of the symbolic constant SIZE are replaced with the replacement text 5. Using symbolic constants to specify array sizes makes programs more
-modifiable.  As programs get larger, this technique becomes more useful for writing clear, easy to read, maintainable programs—a symbolic constant (like SIZE) is easier to understand than the numeric value 5, which could have different meanings throughout the code.
+This #define preprocessor directive defines a symbolic constant SIZE whose value is 5. A symbolic constant is an identifier that’s replaced with replacement text by the C preprocessor before the program is compiled. When the program is preprocessed, all occurrences of the symbolic constant SIZE are replaced with the replacement text 5. Using symbolic constants to specify array sizes makes programs more modifiable. As programs get larger, this technique becomes more useful for writing clear, easy to read, maintainable programs—a symbolic constant (like SIZE) is easier to understand than the numeric value 5, which could have different meanings throughout the code.
+
+## Character Arrays
+
+A character array can be initialized using a string literal.
+
+Example:
+
+```c
+char string1[] = "first";
+```
+
+The above example initializes the elements of array string1 to the individual characters in the string literal "first". In this case, the size of array string1 is determined by the compiler based on the length of the string. The string "first" contains five characters plus a special string-termination character called the `null character`. Thus, array string1 actually contains six elements. The escape sequence representing the null character is '\0'. All strings in C end with this character. A character array representing a string should always be defined large enough to hold the number of characters in the string and the terminating null character.
+
+Because a string is really an array of characters, we can access individual characters in a string directly using array index notation. 
+
+For example: 
+
+```c
+char string1[] = "first";
+string1[0]
+```
+is the character 'f' and string1[3] is the character 's'.
+
+We also can input a string directly into a character array from the keyboard using scanf and the conversion specifier %s. 
+
+For example:
+
+```c
+char string2[20];
+scanf("%19s", string2); // reads a string into string2
+printf("%s\n, string2); // prints string2
+```
+
+
+
+
