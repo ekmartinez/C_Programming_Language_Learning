@@ -101,4 +101,10 @@ To pass an array argument to a function, specify the array’s name without any 
 int hourlyTemperatures[HOURS_IN_A_DAY];
 modifyArray(hourlyTemperatures, HOURS_IN_A_DAY)
 ```
+All arguments in C are passed by value, but C automatically passes arrays to functions by reference, the called functions can modify the element values in the callers’ original arrays. The array’s name evaluates to the address of the array’s first element. Because the starting address of the array is passed, the called function knows precisely where the array is stored. Therefore, when the called function modifies array elements in its function body, it’s modifying the actual elements of the array in their original memory locations.
+
+Passing arrays by reference makes sense for performance reasons. If arrays were passed by value, a copy of each element would be passed. For large, frequently passed arrays, this would be time consuming and would consume storage for the copies of the arrays.
+
+Although entire arrays are passed by reference, individual array elements are passed by value exactly as simple variables are. Such simple single pieces of data (such as individual ints, floats and chars) are called `scalars`.
+
 
