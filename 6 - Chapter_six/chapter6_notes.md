@@ -94,7 +94,6 @@ A static local variable exists for the duration of the program but is visible on
 
 ## Passing Arrays to Functions
 
-
 To pass an array argument to a function, specify the array’s name without any brackets.
 
 ```c
@@ -107,4 +106,44 @@ Passing arrays by reference makes sense for performance reasons. If arrays were 
 
 Although entire arrays are passed by reference, individual array elements are passed by value exactly as simple variables are. Such simple single pieces of data (such as individual ints, floats and chars) are called `scalars`.
 
+Here is how you can pass an array to a function:
 
+```c
+// Passing Arrays to functions
+
+#include <stddef.h>
+#include <stdio.h>
+#define SIZE 3
+
+void array_printer(int arr[], size_t size);
+
+int main(void)
+
+{
+	int sample_array[SIZE] = {1, 2, 3}; 
+	array_printer(sample_array, SIZE);
+	return 0;
+}
+
+void array_printer(int arr[], size_t size) {
+
+	for (size_t x = 0; x < size; ++x){
+		printf("%d\n", arr[x]);
+
+	}
+
+}
+
+```
+There may be situations in your programs in which a function should not be allowed
+to modify array elements. C provides the type qualifier const (for “constant”) that can be used to prevent modification of array values in a function.
+
+```c
+void immutable_array(const int b[]) {
+	b[0] /= 2; //error
+	b[1] /= 2; //error
+	b[2] /= 2; //error
+} 
+
+
+```
