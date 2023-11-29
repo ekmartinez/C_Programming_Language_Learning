@@ -144,6 +144,16 @@ void immutable_array(const int b[]) {
 	b[1] /= 2; //error
 	b[2] /= 2; //error
 } 
+```
 
+## Multidimensional Arrays
 
+A common use of `multidimensional arrays` is to represent tables of values consisting of information arranged in rows and columns. To identify a particular table element, we must specify two indices: The first (by convention) identifies the element’s row and the second (by convention) identifies the element’s column. Tables or arrays that require two indices to identify a particular element are called `two-dimensional arrays`. `Multidimensional arrays` can have more than two indices.
+
+Multidimensional array can be initialized when it’s defined. 
+
+For example:
+
+```c
+int b[2][2] = {{1}, {3, 4}};
 ```
