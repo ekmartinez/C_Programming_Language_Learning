@@ -83,9 +83,9 @@ to another stream.
 
 * `Release candidates` - are generally feature complete, (mostly) bug free and ready for use by the community, which provides a diverse testing environment the software is used on different systems, with varying constraints and for a variety of purposes.
 
-* `Final Release` - Any bugs that appear in the release candidate are corrected, and eventually the final product is released to the general public. Software companies often distribute incremental updates over the Internet.
+`Final Release` - Any bugs that appear in the release candidate are corrected, and eventually the final product is released to the general public. Software companies often distribute incremental updates over the Internet.
 
-* `Continuous beta` - Software that’s developed using this approach (for example, Google search or Gmail) generally does not have version numbers. It’s hosted in the cloud (not installed on your computer) and is constantly evolving so that users always have the latest version.
+`Continuous beta` - Software that’s developed using this approach (for example, Google search or Gmail) generally does not have version numbers. It’s hosted in the cloud (not installed on your computer) and is constantly evolving so that users always have the latest version.
 
 Reference:
 C How to program 8th Edition
