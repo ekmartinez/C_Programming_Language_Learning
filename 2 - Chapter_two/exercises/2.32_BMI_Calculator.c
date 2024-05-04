@@ -40,18 +40,18 @@ int main(void)
 
 	// Categorize BMI	
 
-	if (bmi < 18.5){
+	if (bmi <= 18.5){
 		puts("Underweight");
 	}   
-	else if (bmi >= 18.5 && bmi <= 24.9) {
+	else if (bmi > 18.5 && bmi <= 24.9) {
 		puts("Normal");
 	}
    
-	else if (bmi >= 25 && bmi <= 29.9) {
+	else if (bmi > 24.9 && bmi < 29.9) {
 		puts("Overweight");
 	}
 
-	else if (bmi >= 30){
+	else if (bmi > 29.9){
 		puts("Obese");
 	}
 
@@ -62,7 +62,38 @@ int main(void)
 }
 
 
+/*
+ **Test Case 1: Normal Weight**
 
+* Weight (in pounds): 120
+* Height (in inches): 60
+* Expected BMI: approximately 23.40
+
+**Test Case 2: Normal Weight**
+
+* Weight (in pounds): 90
+* Height (in inches): 55
+* Expected BMI: approximately 20.9
+
+**Test Case 3: Overweight**
+
+* Weight (in pounds): 150
+* Height (in inches): 65
+* Expected BMI: approximately 25
+
+**Test Case 4: Obese**
+
+* Weight (in pounds): 311
+* Height (in inches): 65
+* Expected BMI: approximately 51.7
+
+**Test Case 5: Very Tall and Underweight**
+
+* Weight (in pounds): 80
+* Height (in inches): 75
+* Expected BMI: approximately 10
+
+*/
 
 
 
