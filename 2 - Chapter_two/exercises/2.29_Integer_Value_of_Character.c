@@ -23,19 +23,20 @@ A B C a b c 0 1 2 $ * + / and the blank character.
 int main(void) 
 {
 		
-printf( "%s%d\n", "Integer equivalent of A is: ", 'A');
-printf( "%s%d\n", "Integer equivalent of B is: ", 'B'); 
-printf( "%s%d\n", "Integer equivalent of C is: ", 'C');
-printf( "%s%d\n", "Integer equivalent of a is: ", 'a');
-printf( "%s%d\n", "Integer equivalent of b is: ", 'b');
-printf( "%s%d\n", "Integer equivalent of c is: ", 'c');
-printf( "%s%d\n", "Integer equivalent of 0 is: ", '0');
-printf( "%s%d\n", "Integer equivalent of 1 is: ", '1');
-printf( "%s%d\n", "Integer equivalent of 2 is: ", '2');
-printf( "%s%d\n", "Integer equivalent of $ is: ", '$');
-printf( "%s%d\n", "Integer equivalent of * is: ", '*');
-printf( "%s%d\n", "Integer equivalent of + is: ", '+');
-printf( "%s%d\n", "Integer equivalent of / is: ", '/');
-printf( "%s%d\n", "Integer equivalent of blank is: ", ' ');
-
+	printf( "%s%d\n", "Integer equivalent of A is: ", 'A');
+	printf( "%s%d\n", "Integer equivalent of B is: ", 'B'); 
+	printf( "%s%d\n", "Integer equivalent of C is: ", 'C');
+	printf( "%s%d\n", "Integer equivalent of a is: ", 'a');
+	printf( "%s%d\n", "Integer equivalent of b is: ", 'b');
+	printf( "%s%d\n", "Integer equivalent of c is: ", 'c');
+	printf( "%s%d\n", "Integer equivalent of 0 is: ", '0');
+	printf( "%s%d\n", "Integer equivalent of 1 is: ", '1');
+	printf( "%s%d\n", "Integer equivalent of 2 is: ", '2');
+	printf( "%s%d\n", "Integer equivalent of $ is: ", '$');
+	printf( "%s%d\n", "Integer equivalent of * is: ", '*');
+	printf( "%s%d\n", "Integer equivalent of + is: ", '+');
+	printf( "%s%d\n", "Integer equivalent of / is: ", '/');
+	printf( "%s%d\n", "Integer equivalent of blank is: ", ' ');
+	
+	return 0;
 }

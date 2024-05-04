@@ -38,6 +38,8 @@ int main(void)
 	// Compute the Body Mass Index
 	double bmi = (weight * BMI_FACTOR) / (height * height);
 
+	printf("%s %.1lf -> ", "BMI: ", bmi);
+
 	// Categorize BMI	
 
 	if (bmi <= 18.5){
@@ -54,8 +56,6 @@ int main(void)
 	else if (bmi > 29.9){
 		puts("Obese");
 	}
-
-	printf("%.1lf\n", bmi);
 
 
 	return 0;

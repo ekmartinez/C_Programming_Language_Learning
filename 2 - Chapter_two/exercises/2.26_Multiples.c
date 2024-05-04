@@ -1,6 +1,7 @@
 /*
-2.26 (Multiples) Write a program that reads in two integers and determines and prints whether
-the first is a multiple of the second. [Hint: Use the remainder operator.]
+2.26 (Multiples) Write a program that reads in two integers and 
+determines and prints whether the first is a multiple of the second. 
+[Hint: Use the remainder operator.]
 */
 
 #include <stdio.h>
@@ -14,8 +15,8 @@ int main(void)
 	scanf("%d%d", &num1, &num2);
 	
 	if (num1 == 0 || num2 == 0) {
-    printf("%s", "Error: One of the input numbers is zero.\n");
-    return 1;
+		printf("%s", "Error: One of the input numbers is zero.\n");
+		return 1;
 	}	
 	else if(num1 % num2 == 0){
 		puts("Yes");

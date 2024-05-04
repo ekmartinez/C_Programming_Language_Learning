@@ -1,5 +1,7 @@
 /*
- 2.27 (Checkerboard Pattern of Asterisks) Display the following checkerboard pattern with eight printf statements and then display the same pattern with as few printf statements as possible.
+ 2.27 (Checkerboard Pattern of Asterisks) 
+ Display the following checkerboard pattern with eight printf statements 
+ and then display the same pattern with as few printf statements as possible.
 
 * * * * * * * *
  * * * * * * * *
@@ -10,8 +12,8 @@
 * * * * * * * *
  * * * * * * * *
 
- It is better to solve this problem using for loops.
- But at this stage of the book looping hasn't been introduced.
+ It is better to solve this problem using loops, but at this stage of 
+ the book looping hasn't been introduced.
  */
 
 #include <stdio.h>

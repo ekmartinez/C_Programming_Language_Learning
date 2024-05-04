@@ -1,5 +1,7 @@
 /*
-2.25 Print your initials in block letters down the page. Construct each block letter out of the letter it represents, as shown on the top of the next page:
+2.25 Print your initials in block letters down the page. 
+Construct each block letter out of the letter it represents, 
+as shown on the top of the next page:
 */
 
 #include <stdio.h>
@@ -13,3 +15,24 @@ int main(void) {
 
 }
 
+/*
+Output:
+
+EEEEEEEEE
+E
+EEEEE
+E
+EEEEEEEEE
+
+ZZZZZZZZZ
+        z
+    z
+z
+zzzzzzzzz
+
+W       W
+W       W
+W   W   W
+W  W W  W
+W W   W W
+*/
