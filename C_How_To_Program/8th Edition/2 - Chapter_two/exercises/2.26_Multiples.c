@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%s", "Enter two integers ->> ");
 	scanf("%d%d", &num1, &num2);
-	
+
 	if (num1 == 0 || num2 == 0) {
 		printf("%s", "Error: One of the input numbers is zero.\n");
 		return 1;

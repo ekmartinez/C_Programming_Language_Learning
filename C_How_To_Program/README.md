@@ -1,7 +1,7 @@
-# **The Significance of Learning C in Today’s Technological Landscape**
+# **The Relevance of Learning C in Today’s Technological Landscape**
 
 ## **Introduction**:
-C programming, as presented in the influential text "C How to Program, 8th Edition" by Deitel, stands as the cornerstone of modern computing. Rooted in the foundational principles of programming, C has retained its relevance in today’s rapidly evolving technological landscape. Understanding C provides a robust foundation upon which aspiring programmers can build expertise in various fields, making it an indispensable language to learn.
+C programming, as presented in the influential text "C How to Program" by Deitel, stands as the cornerstone of modern computing. Rooted in the foundational principles of programming, C has retained its relevance in today’s rapidly evolving technological landscape. Understanding C provides a robust foundation upon which aspiring programmers can build expertise in various fields, making it an indispensable language to learn.
 
 ## **Key Aspects of C Programming:**
 C is a procedural, general-purpose programming language known for its efficiency, portability, and flexibility. Several key features contribute to its importance:

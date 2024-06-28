@@ -12,7 +12,7 @@ Lets begin our discussion with a basic example:
 
 int main( void )
 {
-	printf( "Welcome to C!\n");
+	printf("Welcome to C!\n");
 }
 
 Output:
