@@ -25,7 +25,7 @@ int main(void) {
     int binary = 0;
     int remaider = 0;
 
-    printf("%s", "Enter a binary remaider (5 digits max): ");
+    printf("%s", "Enter a binary number (5 digits max): ");
     scanf("%d", &binary);
 
     int first_digit = binary / 10000;
