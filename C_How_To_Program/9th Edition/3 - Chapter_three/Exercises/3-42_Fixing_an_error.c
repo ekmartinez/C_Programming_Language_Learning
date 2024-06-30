@@ -16,8 +16,8 @@ int main(void)
 
     int x = 1;
     int y = 2;
-
     int sum = x + y;
+
     printf("\n%s%d\n\n", "which is equal to: ", ++sum);
 
     return 0;
