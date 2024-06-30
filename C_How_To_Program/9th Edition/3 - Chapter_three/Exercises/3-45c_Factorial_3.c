@@ -1,5 +1,5 @@
 /*
-Write a program that computes the value of ex by using the formula:
+Write a program that computes the value of e^x by using the formula:
 e^x = 1 + x/1! + x^2/2! + x^3/3! + ...
 
 Note: Functions are not covered until chapter 4 but we used them
