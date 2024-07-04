@@ -2,9 +2,9 @@
 Write a program that estimates the value of the mathematical constant e
 by using the formula: 1 + 1/1! + 1/2! + 1/3! + ...
 
-Note: Functions are not covered until chapter 4 but we used them
-here for practicality.  If functions are not used, the solution
-to the problem can get a little crazy...
+Note: Functions are not covered until chapter 5 but we used them
+here for practicality.  If functions were not used, the solution
+to the problem can get a little crazy.
 */
 
 

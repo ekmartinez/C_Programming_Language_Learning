@@ -25,7 +25,7 @@ Write a separate application that inputs an encrypted four-digit integer and dec
 
 (Note: The above instructions requires a separate application for decrypting data.
 We instead decided to include both, encryption and decryption in the same application
-because it is more practical.  We also used functions which are not covered until chapter 4.)
+because it is more practical.  We also used functions which are not covered until chapter 5.)
 
 [Optional reading project: In industrial-strength applications, you’ll want to use much stronger
 encryption techniques than presented in this exercise. Research “public-key cryptography” in general
@@ -49,7 +49,6 @@ int main(void)
     scanf("%d", &option);
 
     while(1) {
-
         if (option == 1) {
             printf("\n%s", "(Encryption) Enter a four digit code: ");
             scanf("%d", &code);

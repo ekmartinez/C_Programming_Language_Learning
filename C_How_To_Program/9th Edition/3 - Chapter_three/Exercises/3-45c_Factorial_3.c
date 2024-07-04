@@ -2,9 +2,9 @@
 Write a program that computes the value of e^x by using the formula:
 e^x = 1 + x/1! + x^2/2! + x^3/3! + ...
 
-Note: Functions are not covered until chapter 4 but we used them
+Note: Functions are not covered until chapter 5 but we used them
 here for practicality.  If functions are not used, the solution
-to the problem can get a little crazy...
+to the problem can get a little crazy.
 */
 
 #include <stdio.h>
