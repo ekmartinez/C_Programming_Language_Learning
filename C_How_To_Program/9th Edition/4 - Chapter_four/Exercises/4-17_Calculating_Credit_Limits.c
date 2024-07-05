@@ -88,6 +88,8 @@ int main(void) {
         }
 
     } while (option != 3);
+
+    return 0;
 }
 
 /*

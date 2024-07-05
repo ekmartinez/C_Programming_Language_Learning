@@ -57,6 +57,8 @@ int main(void)
         printf("%s", "*");
     }
     puts("\n");
+
+    return 0;
 }
 
 /*
