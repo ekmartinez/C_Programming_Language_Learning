@@ -22,7 +22,6 @@ credit limits.
 
 int main(void) {
 
-    int c;
     int acct_num = 0;
     int old_credit = 0;
     int new_credit = 0;
