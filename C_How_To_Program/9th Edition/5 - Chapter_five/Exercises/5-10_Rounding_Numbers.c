@@ -1,12 +1,8 @@
 /*
-You will imagine that you are a C application tester, I am the C programmer that wrote the code for solving the following problem:
-
 5.10 (Rounding Numbers) An application of function floor is rounding a value to the nearest integer.
 The statement y = floor(x + .5); rounds x to the nearest integer and assigns the result to y.
 Write a program that reads several numbers and rounds each of these numbers to the nearest integer.
 For each number processed, print both the original number and the rounded number.
-
-Your job will be to write test cases in order to test that the program is working as intended.
 */
 
 #include <stdio.h>
