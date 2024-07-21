@@ -41,3 +41,17 @@ void fillCharacter(int n, char c[]) {
     }
     puts("");
 }
+
+/*
+
+Output:
+
+Enter side: 5
+Enter character: ^
+
+^^^^^
+^^^^^
+^^^^^
+^^^^^
+^^^^^
+*/
