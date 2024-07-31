@@ -25,29 +25,33 @@ on the correct answer.
 #include <time.h>
 #include <string.h>
 
+enum Status {CONTINUE, END};
+
 int main(void) {
-//    srand(time(NULL));
-//    int randomNumber = 1 + rand() % 1000;
+    srand(time(NULL));
+
+    int guess = 0;
+    char continuation[] = "";
+    enum Status gameStatus = CONTINUE;
 
     do {
-        int number = 5;
-        int guess = 0;
-        char continuation[] = "";
+        int number = 1 + rand() % 1000;
 
-        printf("%s\n", "I have a number between 1 and 1000.");
+        printf("\n%s\n", "I have a number between 1 and 1000.");
         printf("%s\n", "Can you guess my number?");
         printf("%s", "Please type your first guess >>> ");
         scanf("%d", &guess);
+        puts("");
 
         if (guess == number) {
-            printf("%s\n", "Excellent! You guessed the number!");
-            printf("%s\n", "Would you like to play again (y or n)?");
+            printf("\n%s\n", "Excellent! You guessed the number!");
+            printf("%s", "Would you like to play again (y or n)? >>> ");
             scanf("%s", continuation);
             if (strcmp(continuation, "y") == 0) {
-               continue;
+               gameStatus = CONTINUE;
             }
             else {
-                break;
+                gameStatus = END;
             }
         }
         else {
@@ -61,18 +65,52 @@ int main(void) {
                     scanf("%d", &guess);
                 }
                 if (guess == number) {
-                    printf("%s\n", "Excellent! You guessed the number!");
-                    printf("%s\n", "Would you like to play again (y or n)?");
+                    printf("\n%s\n", "Excellent! You guessed the number!");
+                    printf("%s", "Would you like to play again (y or n)? >>> ");
                     scanf("%s", continuation);
                     if (strcmp(continuation, "y") == 0) {
-                        continue;
+                        gameStatus = CONTINUE;
+                        break;
                     }
                     else {
+                        gameStatus = END;
                         break;
                     }
                 }
             }
         }
-
-    }while(1);
+    } while(gameStatus == CONTINUE);
 }
+
+/*
+Output:
+
+I have a number between 1 and 1000.
+Can you guess my number?
+Please type your first guess >>> 500
+
+Too high. Try again >>> 250
+Too low. Try again >>> 350
+Too high. Try again >>> 275
+Too low. Try again >>> 300
+Too low. Try again >>> 325
+Too low. Try again >>> 335
+
+Excellent! You guessed the number!
+Would you like to play again (y or n)? >>> y
+
+I have a number between 1 and 1000.
+Can you guess my number?
+Please type your first guess >>> 500
+
+Too low. Try again >>> 750
+Too low. Try again >>> 900
+Too high. Try again >>> 850
+Too high. Try again >>> 800
+Too low. Try again >>> 825
+Too low. Try again >>> 845
+Too low. Try again >>> 847
+
+Excellent! You guessed the number!
+Would you like to play again (y or n)? >>> n
+*/
