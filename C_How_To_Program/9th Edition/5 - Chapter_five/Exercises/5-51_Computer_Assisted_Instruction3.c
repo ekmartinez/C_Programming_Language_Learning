@@ -15,7 +15,6 @@ next level!", then reset the program so another student can try it.
 
 int question(void);
 void feedback(int o);
-void pause(void);
 
 int main(void) {
     srand(time(NULL));
