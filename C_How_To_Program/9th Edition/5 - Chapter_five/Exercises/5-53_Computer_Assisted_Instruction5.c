@@ -9,19 +9,44 @@ means multiplication problems only and 4 means a random mixture of all these typ
 #include <stdlib.h>
 #include <time.h>
 
-int question(int d);
+// Prototyping
+int questions(int t, int d);
 void feedback(int o);
+void difficultyOptions(void);
+void arithmeticOptions(void);
+int addition(int addend, int augend);
+int subtraction(int minuend, int subtrahend);
+int multiplication(int multiplicand, int multiplier);
 
 int main(void) {
     // Start Menu
     printf("\n%s\n", "Computer Assisted Instruction");
     printf("%s\n", "----------------------------");
-    printf("%s\n", "Dificulty:");
-    printf("%s\n", "1 - Easy (One digit questions)");
-    printf("%s\n", "2 - Intermediate (Two digit questions)");
-    printf("%s\n", "3 - Advanced (Three digit questions)");
 
+    // Arithmetic Options
+    int type = 0;
+    arithmeticOptions();
+    printf("\n%s", "Choose an option >>> ");
+    scanf("%d", &type);
+
+    switch(type) {
+        case 1:
+            printf("%s\n", "Topic: Addition");
+            break;
+        case 2:
+            printf("%s\n", "Topic: Subtraction");
+            break;
+        case 3:
+            printf("%s\n", "Topic: Multiplication");
+            break;
+        case 4:
+            printf("%s\n", "Topic: Mixed");
+            break;
+    }
+
+    // Difficulty selection
     int difficulty = 0;
+    difficultyOptions();
     printf("\n%s", "Choose a Dificulty Level >>> ");
     scanf("%d", &difficulty);
 
@@ -44,19 +69,47 @@ int main(void) {
     int wrong = 0;
     int numberOfQuestions = 10;
     int counter = numberOfQuestions - numberOfQuestions;
+    double passed = .75;
 
     do {
-        switch(difficulty) {
-            case 1:
-                solution = question(1);
-                break;
-            case 2:
-                solution = question(2);
-                break;
-            case 3:
-                solution = question(3);
-                break;
+
+        if (type == 1 && difficulty == 1) {
+            solution = questions(1, 1);
         }
+        else if (type == 1 && difficulty == 2) {
+            solution = questions(1, 2);
+        }
+        else if (type == 1 && difficulty == 3) {
+            solution = questions(1, 3);
+        }
+        else if (type == 2 && difficulty == 1) {
+            solution = questions(2, 1);
+        }
+        else if (type == 2 && difficulty == 2) {
+            solution = questions(2, 2);
+        }
+        else if (type == 2 && difficulty == 3) {
+            solution = questions(2, 3);
+        }
+        else if (type == 3 && difficulty == 1) {
+            solution = questions(3, 1);
+        }
+        else if (type == 3 && difficulty == 2) {
+            solution = questions(3, 2);
+        }
+        else if (type == 3 && difficulty == 3) {
+            solution = questions(3, 3);
+        }
+        else if (type == 4 && difficulty == 1) {
+            solution = questions(4, 1);
+        }
+        else if (type == 4 && difficulty == 2) {
+            solution = questions(4, 2);
+        }
+        else if (type == 4 && difficulty == 3) {
+            solution = questions(4, 3);
+        }
+
         printf("%s", "Type your answer >>> ");
         scanf("%d", &answer);
         if (answer == solution) {
@@ -82,10 +135,10 @@ int main(void) {
             printf("%s%d\n", "Wrong Answers: ", wrong);
             printf("%s%.2f%s\n", "Percentage: ", percentage, "%");
 
-            if (percentage < .75) {
+            if (percentage < passed) {
                 printf("\n%s\n\n", "Please ask your teacher for extra help.");
             }
-            else if (percentage > .75) {
+            else if (percentage >= passed) {
                 printf("\n%s\n\n", "Congratulations, you are ready to go to the next level!");
             }
             break;
@@ -93,11 +146,43 @@ int main(void) {
     } while(1);
 } // End main
 
-int question(int difficulty) {
+void difficultyOptions(void) {
+    printf("\n%s\n", "Dificulty:");
+    printf("%s\n", "1 - Easy (One digit questions)");
+    printf("%s\n", "2 - Intermediate (Two digit questions)");
+    printf("%s\n", "3 - Advanced (Three digit questions)");
+}
+
+void arithmeticOptions(void) {
+    printf("%s\n", "Arithmetic options:");
+    printf("%s\n", "1 - Addition");
+    printf("%s\n", "2 - Subtraction");
+    printf("%s\n", "3 - Multiplication");
+    printf("%s\n", "4 - Mixed");
+}
+
+int addition(int addend, int augend) {
+   int sum = addend + augend;
+   printf("\n%d + %d = ?\n", addend, augend);
+   return sum;
+}
+
+int subtraction(int minuend, int subtrahend) {
+    int difference = minuend - subtrahend;
+    printf("\n%d - %d = ?\n", minuend, subtrahend);
+    return difference;
+}
+
+int multiplication(int multiplicand, int multiplier) {
+    int product = multiplicand * multiplier;
+    printf("\n%d x %d = ?\n", multiplicand, multiplier);
+    return product;
+}
+
+int questions(int type, int difficulty) {
     srand(time(NULL));
     int min = 0;
     int max = 0;
-
     switch(difficulty) {
         case 1:
             min = 1;
@@ -113,11 +198,38 @@ int question(int difficulty) {
             break;
     }
 
-    int multiplicand = min + rand() % max;
-    int multiplier = min + rand() % max;
-    printf("\nHow much is %d times %d?\n", multiplicand, multiplier);
+    int question = 0;
+    int firstOperand = min + rand() % max;
+    int secondOperand = min + rand() % max;
 
-    return multiplicand * multiplier;
+    if (type == 1) {
+        // Addition
+        question = addition(firstOperand, secondOperand);
+    }
+    else if (type == 2) {
+        // Subtraction
+        question = subtraction(firstOperand, secondOperand);
+    }
+    else if (type == 3) {
+        // Multiplication
+        question =  multiplication(firstOperand, secondOperand);
+    }
+    else if (type == 4) {
+        // Problem randomization
+        int randomProblem = 1 + rand() % 3;
+        switch(randomProblem) {
+            case 1:
+                question = addition(firstOperand, secondOperand);
+                break;
+            case 2:
+                question = subtraction(firstOperand, secondOperand);
+                break;
+            case 3:
+                question = multiplication(firstOperand, secondOperand);
+                break;
+        }
+    }
+    return question;
 }
 
 void feedback(int option) {
