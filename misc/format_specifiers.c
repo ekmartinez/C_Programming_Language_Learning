@@ -20,6 +20,8 @@ unsigned short                  %hu             %hu
 short                           %hd             %hd
 char                            %c              %c
 size_t                          %zu
+
+pointer                         %p
 -------------------------------------------------------
 
 size_t - The C standard says size_t represents an unsigned
