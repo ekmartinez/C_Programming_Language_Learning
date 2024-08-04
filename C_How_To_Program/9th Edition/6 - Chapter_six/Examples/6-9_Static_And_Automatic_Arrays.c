@@ -56,3 +56,29 @@ void automaticArrayInit(void) {
         printf("array2[%zu] = %d ", i, array2[i] += 5);
     }
 }
+
+/*
+First call to each function:
+
+Values on entering staticArrayInit:
+array1[0] = 0 array1[1] = 0 array1[2] = 0
+Values on exiting staticArrayInit:
+array1[0] = 5 array1[1] = 5 array1[2] = 5
+
+Values on entering automaticArrayInit:
+array2[0] = 1 array2[1] = 2 array2[2] = 3
+Values on exiting automaticArrayInit:
+array2[0] = 6 array2[1] = 7 array2[2] = 8
+
+Second call to each function:
+
+Values on entering staticArrayInit:
+array1[0] = 5 array1[1] = 5 array1[2] = 5
+Values on exiting staticArrayInit:
+array1[0] = 10 array1[1] = 10 array1[2] = 10
+
+Values on entering automaticArrayInit:
+array2[0] = 1 array2[1] = 2 array2[2] = 3
+Values on exiting automaticArrayInit:
+array2[0] = 6 array2[1] = 7 array2[2] = 8
+*/
