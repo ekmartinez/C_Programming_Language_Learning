@@ -211,9 +211,11 @@ The array has four elements. The char * indicates that each suit element is of t
 Each pointer points to the first character of its corresponding string. Thus, even
 though a char * array is fixed in size, it can point to character strings of any length. This flexibility is one example of C’s powerful data-structuring capabilities.
 
+## Function Pointers
 
+A function’s name is really the starting address in memory of the code that performs the function’s task. A pointer to a function contains the address of the function in memory. Pointers to functions can be passed to functions, returned from functions, stored in arrays, assigned to other function pointers of the same type and compared with one another for equality or inequality.
 
-
+A common use of function pointers is in menu-driven systems. A program prompts a user to select an option from a menu (possibly from 0 to 2) by typing the menu item’s number. The program services each option with a different function. It stores pointers to each function in an array of function pointers. The user’s choice is used as an array subscript, and the pointer in the array is used to call the function.
 
 
 
