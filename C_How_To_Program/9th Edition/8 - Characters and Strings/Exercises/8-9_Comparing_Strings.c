@@ -1,5 +1,7 @@
 /*
-8.9 (Comparing Strings) Write a program that uses function strcmp to compare two strings input by the user. The program should state whether the first string is less than, equal to or greater than the second string.
+8.9 (Comparing Strings) Write a program that uses function strcmp to compare two
+strings input by the user. The program should state whether the first string is less than,
+equal to or greater than the second string.
 */
 
 #include <stdio.h>
