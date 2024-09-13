@@ -39,22 +39,3 @@ void reverse(const char * const sPtr) {
         putchar(*sPtr); // use putchar to display character
     }
 }
-
-/*
-Thank you that did it, but I edited it to add a space between the words, as a result the reversed sentence has a space before the reversed sentence.
-
-void reverse(const char * const sPtr) {
-    // if end of the string
-    if ('0' == sPtr[0]) { // base case
-        printf("%s", " ");
-        return;
-    }
-    else { // if not end of string
-        reverse(&sPtr[1]); // recursion step
-        putchar(sPtr[0]); // use putchar to display character
-    }
-}
-
-
-
-*/
