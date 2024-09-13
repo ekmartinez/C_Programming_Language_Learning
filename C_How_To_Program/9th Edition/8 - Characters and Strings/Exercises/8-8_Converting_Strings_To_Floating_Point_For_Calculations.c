@@ -4,10 +4,6 @@ inputs four strings representing floating-point values, converts the strings to
 double values, sums the values and prints the total of the four values.
 */
 
-
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
