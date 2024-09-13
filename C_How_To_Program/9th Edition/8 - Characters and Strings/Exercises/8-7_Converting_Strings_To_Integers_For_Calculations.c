@@ -1,4 +1,6 @@
-/* 8.7 (Converting Strings to Integers for Calculations) Write a program that inputs four strings representing integers, converts the strings to integers, sums the values and prints the total of the four values.
+/* 8.7 (Converting Strings to Integers for Calculations) Write a program that
+ * inputs four strings representing integers, converts the strings to integers,
+ * sums the values and prints the total of the four values.
 */
 
 #include <stdio.h>
