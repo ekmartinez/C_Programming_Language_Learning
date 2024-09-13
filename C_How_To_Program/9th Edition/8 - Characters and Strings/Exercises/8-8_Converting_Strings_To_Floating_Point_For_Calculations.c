@@ -1,5 +1,12 @@
-/* 8.7 (Converting Strings to Integers for Calculations) Write a program that inputs four strings representing integers, converts the strings to integers, sums the values and prints the total of the four values.
+/*
+8.8 (Converting Strings to Floating Point for Calculations) Write a program that
+inputs four strings representing floating-point values, converts the strings to
+double values, sums the values and prints the total of the four values.
 */
+
+
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
