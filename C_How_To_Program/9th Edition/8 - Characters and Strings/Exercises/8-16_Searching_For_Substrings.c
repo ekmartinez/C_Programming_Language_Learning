@@ -6,18 +6,32 @@ variable searchPtr of type char *. If the search string is found, print the
 remainder of the line of text beginning with the search string. Then, use strstr
 again to locate the next occurrence of the search string in the line of text. If
 a second occurrence is found, print the remainder of the line of text beginning
-with the second occurrence. [Hint: The second call to strstr should contain searchPtr + 1 as its first argument.]
+with the second occurrence. [Hint: The second call to strstr should contain
+searchPtr + 1 as its first argument.]
  */
 
 #include <string.h>
 #include <stdio.h>
 
+#define STRING 100
+#define SUB 100
+
 int main(void) {
 
-    const char *string1 = "abcdefabcdefabcdefabcdef";
-    const char *string2 = "def";
+    char string[STRING] = "";
+    char substring[SUB] = "";
 
-    char * searchPtr = strstr(string1, string2);
+    // Input string
+    puts("Enter a string: ");
+    fgets(string, STRING, stdin);
+    string[strcspn(string, "\n")] = 0; // removes \n
+
+    // Input substring
+    puts("Enter a substring: ");
+    fgets(substring, SUB, stdin);
+    substring[strcspn(substring, "\n")] = 0; // removes \n
+
+    char * searchPtr = strstr(string, substring);
     printf("%s\n", searchPtr);
-    printf("%s\n", strstr(searchPtr + 1, string2));
+    printf("%s\n", strstr(searchPtr + 1, substring));
 }
