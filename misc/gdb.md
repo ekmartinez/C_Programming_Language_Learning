@@ -4,7 +4,9 @@ This section contains some commands and explanations on how to use the GNU Debug
 
 In order to debug a program it has to be compiled with debugging information, for example:
 
+```bash
 gcc program.c -o program -g
+```
 
 The -g flag include the debugging data.
 
