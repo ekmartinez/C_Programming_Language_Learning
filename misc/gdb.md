@@ -2,6 +2,12 @@
 
 This section contains some commands and explanations on how to use the GNU Debugger to debug C binaries.
 
+In order to debug a program it has to be compiled with debugging information, for example:
+
+gcc program.c -o program -g
+
+The -g flag include the debugging data.
+
 ## Basics
 
 * **run** (r) - Executes the program from start to end.
