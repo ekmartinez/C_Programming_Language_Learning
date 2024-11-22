@@ -14,4 +14,8 @@ This section contains some commands and explanations on how to use the GNU Debug
 * **print** (p) - Displays the value of a variable.
 * **quit** (q) - Exits out of GDB.
 * **clear** - Clears all breakpoints.
+* **help** - Displays help for any command. `help <command>'
+* **info** - Useful for getting information about the program, breakpoints, registers, etc. Example:
 
+    `info locals` - Shows local variables in the current function.
+    `info registers` - Displays the contents of CPU registers.
