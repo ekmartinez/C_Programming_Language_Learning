@@ -1,4 +1,4 @@
-#GNU Debugger Notes
+# GNU Debugger Notes
 
 This section contains some commands and explanations on how to use the GNU Debugger to debug C binaries.
 
