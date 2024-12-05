@@ -28,21 +28,3 @@ int main(void)
 	else 
 		printf("%s%02d:%02d %s\n", "Equivalent 12-hour time: ", hour, minute, "AM"); 
 }
-
-/* 
-Note:
-
-The program is working correctly, but there is a bug when the minutes are 00,
-in this case it prints only one 0. 
-
-Example:
-
-Expected: 12:00 AM
-Actual:	  12:0 AM
-
-To be fixed later.
-
-Also, we had to repeat the printf statement four times to account for meridiem
-changes.  Since string arrays haven't been covered yet, we are sticking with the tools
-we have covered up to this point.
-*/
