@@ -19,17 +19,17 @@ int main(void)
 	
 	if (hour == 0) {
 		hour = 12;
-		printf("\n%s%00d:%00d %s\n", "Equivalent 12-hour time: ", hour, minute, "AM"); 
+		printf("%s%02d:%02d %s\n", "Equivalent 12-hour time: ", hour, minute, "AM"); 
 	}
 	else if (hour == 12)
-		printf("\n%s%00d:%00d %s\n", "Equivalent 12-hour time: ", hour, minute, "PM"); 
+		printf("%s%02d:%02d %s\n", "Equivalent 12-hour time: ", hour, minute, "PM"); 
 	else if (hour > 12 && hour <= 24) 
-		printf("\n%s%00d:%00d %s\n", "Equivalent 12-hour time: ", hour - 12, minute, "PM");
+		printf("%s%02d:%02d %s\n", "Equivalent 12-hour time: ", hour - 12, minute, "PM");
 	else 
-		printf("\n%s%00d:%00d %s\n", "Equivalent 12-hour time: ", hour, minute, "AM"); 
+		printf("%s%02d:%02d %s\n", "Equivalent 12-hour time: ", hour, minute, "AM"); 
 }
 
-/*
+/* 
 Note:
 
 The program is working correctly, but there is a bug when the minutes are 00,
