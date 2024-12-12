@@ -19,7 +19,7 @@ int main(void)
 	scanf("%d/%d", &numerator, &denominator);
 
 	// GCD Calculator
-	// Furter chapters explore the concept of fuctions
+	// Further chapters explore the concept of fuctions
 	// for now we include these instructions in main.
 	// -------------------------------------------------
 	int m = numerator;
