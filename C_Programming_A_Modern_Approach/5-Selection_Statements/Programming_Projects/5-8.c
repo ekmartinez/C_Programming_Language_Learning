@@ -23,3 +23,10 @@ the departure times, also expressed in minutes since midnight. For example, 13:1
 60 + 15 = 795 minutes since midnight, which is closer to 12:47 p.m. (767 minutes since
 midnight) than to any of the other departure times.
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+	;;
+}
