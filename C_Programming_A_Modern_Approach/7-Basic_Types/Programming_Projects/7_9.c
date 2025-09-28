@@ -8,6 +8,7 @@ See Programming Project 8 for a description of the input format.
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void) 
 {	
